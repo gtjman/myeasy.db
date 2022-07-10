@@ -1,0 +1,25 @@
+{
+  "name": "easy-db",
+  "version": "1.0.0",
+  "description": "An Easy To Use JSON File Database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtjman/easy.db.git"
+  },
+  "keywords": [
+    "db",
+    "json",
+    "database",
+    "easy.db"
+  ],
+  "author": "gtjman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gtjman/easy.db/issues"
+  },
+  "homepage": "https://github.com/gtjman/easy.db#readme"
+}

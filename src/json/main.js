@@ -9,9 +9,9 @@ class JSONDatabase {
      * @param {Boolean} options.JSONbeautifier
      * Make data look more beautiful and readable (default is true)
      * @example
-     * const { JSONDatabase } = require('easy.db');
+     * const { JSONDatabase } = require('easy-db');
      * //or
-     * import { JSONDatabase } from 'easy.db';
+     * import { JSONDatabase } from 'easy-db';
      * 
      * const db = new JSONDatabase({
      * file: 'myDatabase.json',
@@ -451,6 +451,10 @@ push(id, value){
 has(id){ 
     return this.get(id) !=null 
 }
+/**
+ * Get all data from the database
+ * @returns {Object}
+ */
 fetchAll(){
 if(existsSync(this)){
 let data = readFileSync(this.file, "utf-8") || {}
@@ -459,6 +463,42 @@ return JSON.parse(data)
     writeFileSync(this.file, '{}')
     return {}
 }
+}
+/**
+ * Get all data from the database
+ * @returns {Object}
+ */
+ getAll(){
+    if(existsSync(this)){
+    let data = readFileSync(this.file, "utf-8") || {}
+    return JSON.parse(data)
+    } else {
+        writeFileSync(this.file, '{}')
+        return {}
+    }
+}
+/**
+ * Get all data from the database
+ * @returns {Object}
+ */
+ findAll(){
+    if(existsSync(this)){
+    let data = readFileSync(this.file, "utf-8") || {}
+    return JSON.parse(data)
+    } else {
+        writeFileSync(this.file, '{}')
+        return {}
+    }
+}
+/**
+ * Get all data from the database in a array
+ * @returns {Array}
+ */
+all(){
+    let data = this.fetchAll()
+    let objs = Object.entries(data)
+    let output = `[` + objs.map(e => `{ "ID": ${JSON.stringify(e[0])}, "VALUE": ${JSON.stringify(e[1])} }`).join() + `]`
+    return JSON.parse(output)
 }
 }
 module.exports = { JSONDatabase };
