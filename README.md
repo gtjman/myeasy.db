@@ -43,7 +43,7 @@ db.remove("") // Delete a data from the database by data id
 
 db.add("", "") // Increase a data number value in the database
 
-db.minus("", "") // Increase a data number value in the database
+db.minus("", "") // Decrease a data number value in the database
 
 db.subtract("", "") // Decrease a data number value in the database
 
