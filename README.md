@@ -13,9 +13,9 @@ yarn add myeasy-.db
 
 ## Import
 ```js
-const { JSONDatabase } = require('easy-db');
+const { JSONDatabase } = require('myeasy-db');
       //or
-import { JSONDatabase } from 'easy-db';
+import { JSONDatabase } from 'myeasy-db';
       
       const db = new JSONDatabase({
        file: 'myDatabase.json',
